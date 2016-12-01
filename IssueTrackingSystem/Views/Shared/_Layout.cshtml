@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@(ViewBag.Title == null ? "ITS" : ViewBag.Title) </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--STYLES-->
+    <link rel="stylesheet" href="~/Content/bootstrap-select.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/importer.less">
+    <!--STYLES END-->
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Tillana" rel="stylesheet">
+    <!-- Font END -->
+</head>
+<body>    
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+
+    @Html.Partial("_Header")
+    <div class="container">
+       @Html.Partial("_Title")
+       @RenderBody()
+    </div>
+    @Html.Partial("_Footer")
+    
+    
+    
+
+    <!--SCRIPTS-->        
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap-select.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>    
+    <script src="~/Scripts/href.js"></script>
+    <script src="~/Scripts/list.min.js"></script>
+    <script src="~/Scripts/select-members.js"></script>
+    <!--SCRIPTS END-->
+</body>
+</html>
